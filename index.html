@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> - Your Personal Password Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">PaSSjT</div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Password Manager</h1>
+        <h2>Your Passwords</h2>
+        <p style="margin: -1px 10px;">Your passwords are not in that much security it can be corrupted even by a nobe hacker , so its only you that have to be careful . This password manager wouldn't be liable for any loss by password leakage.</p>
+        <br>
+        <table>
+            <tr>
+                <td>Interface</td>
+                <td >User Name</td>
+                <td >Password </td>
+                <td rowspan="2">Actions To Be Performed</td>
+            </tr>
+            <!-- <tr>
+                <td>CodeChef</td>
+                <td>unbeatable_cOdEr</td>
+                <td>*******</td>
+                <td>____________</td>
+                
+            </tr> -->
+        
+        
+        </table>  
+        <!----------------- form ------------------->
+        
+        <h2>Add A Password</h2>
+        
+        <form action="login.php" method="post">
+            <label for="Website">Website</label>
+            <input type="text" id="Website" name="Website" required><br><br>
+            
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required><br><br>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required><br><br>
+            
+            <button class="button" type="submit" value="Submit"> Submit </button>  
+        </form>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
