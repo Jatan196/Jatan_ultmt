@@ -1,3 +1,5 @@
+<!-- SVG -> Scalable Vector graphics( for graphics and having sharp button at various sizes) , embedding the SVG within the src attribute of the <img> tag -->
+
 <svg
   width="100"
   height="40"
@@ -5,11 +7,12 @@
 >
   <!-- Rectangle for the button background -->
   <rect
-    width="100"
-    height="40"
-    rx="5"  <!-- Rounded corners -->
-    fill="#0073e6"  <!-- Button background color -->
-  />
+    width="20"
+    height="20"
+     rx="5" 
+      <!-- Rounded corners -->
+    fill="rgb(248, 239, 143)"  <!-- Button background color -->
+  
 
   <!-- Text for the "Copy" label -->
   <text
@@ -17,9 +20,9 @@
     y="50%"
     dominant-baseline="middle"
     text-anchor="middle"
-    fill="white"  <!-- Text color -->
+    fill="black"  <!-- Text color -->
     font-size="16"  <!-- Text size -->
-  >
+  
     Copy
   </text>
 </svg>

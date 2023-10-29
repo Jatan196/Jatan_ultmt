@@ -1,4 +1,12 @@
-console.log("js run")
+//--------------------------------------FUNCTION TO MASK PASSWORD--------------------------
+function mask(pass){
+      let str = ""
+      for (let index = 0; index < pass.length; index++) {
+          str  += "*"
+      }
+      return str
+  }
+  
 //------------------------------------------------------DELETE AND COPY BUTTON----------------------------------------------------
 const deletePassword= (Website)=>{
     let data=localStorage.getItem("passwords")
@@ -39,13 +47,13 @@ const showPasswords = () => {
                         const element = arr[index];
                         // Your code to create the HTML table rows
                         str+=`<tr>
-                          <td>${element.Website}   <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40'><rect width='100' height='40' rx='5' fill='%230073e6' /><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='16'>Copy</text></svg>", alt="Copy" , onclick="copyToClipboard(Website)" , style="cursor: pointer;">
+                          <td>${element.Website}   <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='20'><rect width='40' height='20' rx='5' fill=' rgb(248, 239, 143)' /><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='black      ' font-size='16'>Copy</text></svg>", alt="Copy" , onclick="copyToClipboard('${element.Website}')" , style="cursor: pointer;">
 
                           </td>
-                          <td>${element.username}   <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40'><rect width='100' height='40' rx='5' fill='%230073e6' /><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='16'>Copy</text></svg>", alt="Copy" , onclick="copyToClipboard(username)" , style="cursor: pointer;">
+                          <td>${element.username}   <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='20'><rect width='40' height='20' rx='5' fill=' rgb(248, 239, 143)' /><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='black     ' font-size='16'>Copy</text></svg>", alt="Copy" , onclick="copyToClipboard('${element.username}')" , style="cursor: pointer;">
 
                           </td>
-                          <td>${element.password}    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40'><rect width='100' height='40' rx='5' fill='%230073e6' /><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='16'>Copy</text></svg>", alt="Copy" , onclick="copyToClipboard(password)" , style="cursor: pointer;">
+                          <td>${mask(element.password)}    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='20'><rect width='40' height='20' rx='5' fill=' rgb(248, 239, 143)' /><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='black    ' font-size='16'>Copy</text></svg>", alt="Copy" , onclick="copyToClipboard('${element.password}')" , style="cursor: pointer;">
 
                           </td>
                           <td><button class="delete_button" onclick="deletePassword('${element.Website}')">Delete</button></td>  
@@ -61,8 +69,7 @@ const showPasswords = () => {
       }
 }
 
-console.log("working jatan babu");
-//showPasswords();
+
 document.querySelector(".button").addEventListener("click", (e) => {
       e.preventDefault()//to prevent from submission of form
 
@@ -82,47 +89,54 @@ document.querySelector(".button").addEventListener("click", (e) => {
             json.push({ username: username.value, password: password.value, Website: Website.value })
             console.log("saved password")
             localStorage.setItem("passwords", JSON.stringify(json))// takes as key value, so key -> passwords  , and value as stringfy form of json
-
       }
-
+      
       showPasswords();
+      //Reseting the input fields after submitting the entry
+      document.getElementById("Website").value = "";
+      document.getElementById("username").value = "";
+      document.getElementById("password").value = "";
+   
+
   }
 
 )
 // copy function
 
 
-  const copyToClipboard  = ((e)=> {
+  function copyToClipboard(txt){  
     // Copy text to clipboard (You can replace 'Your text to copy' with the actual text you want to copy)
-    const textToCopy =e.value;
-    const textArea = document.createElement('textarea');
-    textArea.value = textToCopy;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textArea);
+     navigator.clipboard.writeText(txt).then(
+      () =>  {
+          // copy operation is successfull
+          // Display a message
+           const message = document.createElement('div');
+           message.textContent = 'Copied!';
+           message.style.position = 'fixed';
+           message.style.background =  'rgb(248, 239, 143)';
+           message.style.color = 'black';
+           message.style.padding = '5px 10px';  
+           message.style.borderRadius = '5px';
+           message.style.top = '20px';
+           message.style.left = '50%';
+           message.style.transform = 'translateX(-50%)';
+           message.style.zIndex = '9999';
+           document.body.appendChild(message);
 
-    // Display a message
-    const message = document.createElement('div');
-    message.textContent = 'Copied!';
-    message.style.position = 'fixed';
-    message.style.background = '#0073e6';
-    message.style.color = 'white';
-    message.style.padding = '5px 10px';
-    message.style.borderRadius = '5px';
-    message.style.top = '20px';
-    message.style.left = '50%';
-    message.style.transform = 'translateX(-50%)';
-    message.style.zIndex = '9999';
-    document.body.appendChild(message);
+           // Remove the message after a short delay (e.g., 2 seconds)
+           setTimeout(() => {
+            document.body.removeChild(message);
+        }, 2000);
+      },
+      () => {
+            alert("Copy Failed")
+      },
+     );
+  }
 
-    // Remove the message after a short delay (e.g., 2 seconds)
-    setTimeout(() => {
-      document.body.removeChild(message);
-    }, 2000);
-  })
+// Conforamtion Message for successful compilatin of JS file
 
-
+console.log("JS RUN !!!")
 
 
 

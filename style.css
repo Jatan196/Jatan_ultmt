@@ -8,24 +8,23 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
   }
-.container{
-  margin:50px 50px;
-}
-  
+
+/* margin:50px 50px; */
+     
+
    nav{
        display:flex;
        justify-content:space-between;
-       
-       background-color: rgb(187, 207, 61);
+       background-color: paleturquoise;
        padding:25px;
        transition:1.5s;
        /* -ms-transform-origin-z: 50%; */
    }
    nav:hover{
-       background-color: rgb(187, 207, 61,0.5);
+       background-color:white;
        padding:25px;
        
-   }
+   } 
    ul {
        display:flex;
        
@@ -35,7 +34,7 @@
        list-style:none;
    }
   table, td, tr {
-    border:3px dashed palevioletred;
+    border:1px dashed rgb(0, 0, 0);
     border-collapse: collapse;
     padding: 4px 4px;
   }
@@ -43,22 +42,97 @@
      cursor:progress;
      cursor:pointer;
      margin: 0px 200px;
-     background-color: palevioletred;
-     color:aliceblue;
+     background-color:  rgb(248, 239, 143);
+     color:black;
      border-radius: 5px;
      padding:4px;
   }
 .delete_button{
   cursor:progress;
   cursor:pointer;
- // margin: 0px 200px;
-  background-color: palevioletred;
-  color:aliceblue;
+  margin: 0px 200px;
+  background-color:  rgb(248, 239, 143);
+  color:black;
   border-radius: 5px;
   padding:4px;
 }
 
 
+/* imported css */
+/* Style for the outer container (for context) */
+.body {
+  background-image: url('https://i.pinimg.com/474x/00/91/96/0091967780bfa906ea04b819991659ae.jpg');
+   background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+/* Style for the inner container with the glass effect */
+.container {
+  background: rgba(255, 255, 255, 0.7); /* Translucent white background */
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  backdrop-filter: blur(1px); /* Apply a blur effect to the background */
+}
+
+/* Additional styling for your content (e.g., table, form, submit button) */
+/* table {
+  /* Your table styles */
+
+
+/* form {
+  /* Your form styles */
+/*
+
+button[type="submit"] {
+  /* Your submit button styles */
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+body {
+  background-color: #F4F4F4;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+}
+
+.container {
+  background-color: #0073e6;
+  color: #fff;
+  padding: 20px;
+}
+
+button {
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+}
+
+/* .success-message {
+  color: #4CAF50;
+}
+
+.error-message {
+  color: #FF0000;
+} 
+
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+}
+*/
+/* Customize other elements and styles as needed */
 
     
