@@ -69,7 +69,9 @@ const showPasswords = () => {
       }
 }
 
-
+document.querySelector(".button1").addEventListener("click",(e)=> {
+      showPasswords();
+})
 document.querySelector(".button").addEventListener("click", (e) => {
       e.preventDefault()//to prevent from submission of form
 

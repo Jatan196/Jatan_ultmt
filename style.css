@@ -47,6 +47,15 @@
      border-radius: 5px;
      padding:4px;
   }
+  .button1{
+     cursor:progress;
+     cursor:pointer;
+     margin: 0px 20px;
+     background-color:  rgb(248, 239, 143);
+     color:black;
+     border-radius: 5px;
+     padding:3px;
+  }
 .delete_button{
   cursor:progress;
   cursor:pointer;
@@ -71,68 +80,9 @@
 
 /* Style for the inner container with the glass effect */
 .container {
-  background: rgba(255, 255, 255, 0.7); /* Translucent white background */
+  background: rgba(255, 255, 255, 0.8); /* Translucent white background */
   padding: 20px;
   border-radius: 10px;
   position: relative;
   backdrop-filter: blur(1px); /* Apply a blur effect to the background */
 }
-
-/* Additional styling for your content (e.g., table, form, submit button) */
-/* table {
-  /* Your table styles */
-
-
-/* form {
-  /* Your form styles */
-/*
-
-button[type="submit"] {
-  /* Your submit button styles */
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-body {
-  background-color: #F4F4F4;
-  font-family: "Roboto", sans-serif;
-  color: #333333;
-}
-
-.container {
-  background-color: #0073e6;
-  color: #fff;
-  padding: 20px;
-}
-
-button {
-  background-color: #0073e6;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-}
-
-/* .success-message {
-  color: #4CAF50;
-}
-
-.error-message {
-  color: #FF0000;
-} 
-
-h1, h2, h3 {
-  font-family: "Montserrat", sans-serif;
-}
-*/
-/* Customize other elements and styles as needed */
-
-    

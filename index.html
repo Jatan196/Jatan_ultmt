@@ -9,7 +9,7 @@
 <body>
     <nav>
        <div class="logo">PaSSjT</div>
-       <ul>
+       <ul> 
            <li>Home</li>
            <li>About</li>
            <li>Contact</li>
@@ -28,21 +28,18 @@
                 <td >Password </td>
                 <td rowspan="2">Actions To Be Performed</td>
             </tr>
-            <!-- <tr>
-                <td>CodeChef</td>
-                <td>unbeatable_cOdEr</td>
-                <td>*******</td>
-                <td>____________</td>
-                
-            </tr> -->
         
         
         </table>  
+        
         <!----------------- form ------------------->
         
-        <h2>Add A Password</h2>
+        <h2 style="display:inline">Add A Password</h2> <form style="display:inline" action="login.php" method="post"></form>
         
-        <form action="login.php" method="post">
+        
+            <button class="button1" type="showExistingPassword" value="Submit"> Existing Passwords </button>  
+            <br>
+            <br>
             <label for="Website">Website</label>
             <input type="text" id="Website" name="Website" required ><br><br>
                 

@@ -1,0 +1,144 @@
+
+\documentclass{article}
+\usepackage{graphicx}
+\title{\textbf{\underline\centering{PASSWORD MANAGER REPORT }}}
+\author{Jatan Tandon}
+
+
+\begin{document}
+
+\maketitle
+
+
+\section{Introduction}
+Title: "Password Manager Functionality Report"
+
+In this report, we provide a comprehensive overview of a Password Manager, focusing on its core functionalities of storing, deleting, and copying passwords. This essential tool not only enhances security but also simplifies the management of multiple passwords, offering convenience and peace of mind for users. We will delve into its features, usability, and security aspects, shedding light on the significance of an effective password management solution.
+\section{Aim}
+\begin{itemsize}
+\item 1. Designing an aesthetically pleasing and responsive user interface.
+\item 2. Enabling users to securely store and organize their passwords.
+\item 3. Facilitating the deletion of passwords when they are no  longer needed.
+\item 4. Allowing users to easily copy passwords to the clipboard for quick access.
+ \item 5. Enhancing password security awareness and promoting best practices in   password management.
+\end{itemsize}
+\section{Code Overview}
+
+\subsection{HTML File}
+\begin{itemsize}
+ \item 1. A container for the main content with a title and a subheading about password security.
+ \item 2. A table structure for displaying password entries.
+ \item 3. A form for adding passwords with input fields for website, username, and password.
+ \item 4. A submit button to add new passwords.
+ \item 5. A JavaScript file for adding dynamic functionality
+
+
+\end{itemsize}
+
+\subsection{CSS File}
+
+\begin{itemsize}
+
+1. Font Import:
+ \item It imports the 'Poppins' font from Google Fonts to be used throughout the page.
+
+
+2. Global Style:
+ \item Resets margins and padding for all HTML elements to zero.
+ \item Sets the font-family to 'Poppins', providing a consistent font style for the entire page.
+
+3. Nav-Bar:
+
+ \item Makes the navigation bar a flex container with content alignment and background color.
+ \item Adds a transition effect when hovering over the navigation bar, changing its background color.
+
+4. List Items:
+
+ \item Removes list-style and adds margins to the list items within the navigation menu.
+
+5. Table:
+ \item Adds border styling and collapse effect to table elements.
+ \item Sets padding for table cells.
+
+6. Button Styles (.button and .button1):
+  \item Sets margins, background color, text color, border radius, and padding for buttons.
+
+7. Background Styles :
+ \item Sets a background image for the entire body.
+ \item Applies a translucent white background to the container, creating a glass-like effect.
+ \item Defines padding, border-radius, and backdrop filter for the container.
+
+\end{itemsize}
+
+\begin{itemsize}
+\subsection{JS File}
+
+1. Password Masking Function :
+  \item   - A function to mask a given password by replacing each character with an asterisk.
+  \item   - It iterates through the password and builds a masked string of asterisks.
+   \item  - The masked password is returned.\\ 
+   
+2. Delete Password Function :
+
+   \item  - A function that deletes a password entry from local storage based on the website name provided as an argument.
+   \item  - Retrieves the current list of passwords from local storage.
+   \item  - Filters the list to exclude the password entry matching the provided website.
+    \item - Updates the local storage with the filtered list.
+    \item - Displays an alert to confirm the successful deletion and calls `showPasswords` to update the displayed passwords.\\
+    
+
+
+3. Show Passwords Function ( Core function to update table ):
+   \item  - A function that populates a table with password entries stored in local storage.
+    \item - Retrieves the password data from local storage and parses it into an array.
+    \item - Dynamically creates HTML table rows for each password entry, including buttons to copy and delete.
+    \item - Updates the table's inner HTML with the new rows, effectively displaying the passwords.\\
+    
+
+4. Event Listeners:
+    \item - Adds event listeners to buttons with class selectors ".button1" and ".button" ( for displaying and adding passwords).
+    \item - On a button click, these event listeners trigger the respective functions, such as `showPasswords` and password submission.\\
+    
+    
+
+5. Copy  Function:
+   \item  - A function to copy a provided text to the clipboard using the `navigator.clipboard.writeText` method.
+    \item - It provides a user-friendly message when the copy operation is successful.
+    \item - A message element is appended to the body and removed after a short delay.\\
+   
+    
+6. Confirmatory messages:
+    \item - A simple console log message at the end of the script to confirm successful execution.\\
+
+    
+
+
+\subsection{SVG File}
+The provided SVG code creates a scalable "Copy" button with rounded corners and text to be shown on nav bar at the successful action of copy, suitable for various screen sizes. SVG is preferred for its scalability, consistency, precision, accessibility, interactivity, and the absence of separate image files compared to CSS graphics.
+
+\section{Conclusion}\\\\\\\\\\\\\\\\\\\\\\\\\\\
+In conclusion, the combined HTML, CSS, and JavaScript code represents a functional web application for a password manager. It offers features such as password masking, deletion, copying, and dynamic table updates. The use of Scalable Vector Graphics (SVG) for the "Copy" button provides scalability, consistent visual quality, precise control, accessibility, and interactivity. SVG's advantages over CSS graphics include maintaining quality across various screen sizes and devices, making it a wise choice for creating user-friendly and adaptable web interfaces in password management applications.
+\break
+\end{itemsize}
+\section{Profile}
+
+
+\\\\\\\\\\\\\\
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{summary.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}\\\\\\\\\\\\
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{calltree.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}\\\\\\\\\\
+
+\end{document}
